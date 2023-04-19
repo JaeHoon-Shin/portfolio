@@ -1,27 +1,25 @@
 import React, { useContext, useState } from 'react'
 import { portfolioContext } from '../Context';
 import styles from '../css/projectItem.module.scss'
-const Projectinfo = () => {
-  const {info,setPopup,isPopup } = useContext(portfolioContext);
-  const [imgIdx, setImgIdx] = useState(0); // 인포 이미지 슬라이드 인덱스 값
+const Projectinfo = ({ Slider }) => {
+  const { info, setPopup, isPopup } = useContext(portfolioContext);
   const closeBtn = (e) => {
     if (e.target === e.currentTarget) {
       setPopup(!isPopup);
-      setImgIdx(0);
       document.body.style.overflow = "unset";
     }
   }
-  function slideBtn(positon) {
-    if (positon === 'left') {
-      if (imgIdx > 0) {
-        setImgIdx(imgIdx - 1);
-      }
-    }
-    else {
-      if (imgIdx < info.imgUrl.length - 1) {
-        setImgIdx(imgIdx + 1);
-      }
-    }
+  const settings = {
+    draggable: true,
+    infinite: false,
+    arrows: false,
+    dots: false,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    focusOnSelect: true,
+    infinite: true,
+    autoplay: true,
+    autoplaySpeed: 5000
   }
 
   return (
@@ -31,48 +29,38 @@ const Projectinfo = () => {
         <div className={styles.titleBox}>
           <p>{info && info.name}</p>
           <p>{info && info.title} ({info && info.date})</p>
-          
+
         </div>
         {
           info &&
           <div className={styles.infoContentBox}>
             <div className={styles.leftBox}>
-              <div className={styles.imgBox}>
-                <div className={styles.imgSlider} style={{
-                  transform: `translateX(-${imgIdx * 100}%)`,
-                  transition: '0.5s'
-                }}>
+              <div className={`${styles.imgBox} detailSlider`}>
+                <Slider {...settings}>
                   {
                     info.imgUrl && info.imgUrl.map((obj, key) => {
                       return <figure key={key}>
-                        <img src={obj} alt=''></img>
+                        <img src={process.env.PUBLIC_URL + '/' + obj} alt=''></img>
                       </figure>
                     })
                   }
-
-                </div>
-                <div className={styles.pagiNation}>
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="black" height="48" viewBox="0 96 960 960" width="48" onClick={() => { slideBtn('left') }}><path d="m375 816-43-43 198-198-198-198 43-43 241 241-241 241Z" /></svg>
-                  {imgIdx + 1} / {info.imgUrl.length}
-                  <svg xmlns="http://www.w3.org/2000/svg" fill="black" height="48" viewBox="0 96 960 960" width="48" onClick={() => { slideBtn('rigth') }}><path d="m375 816-43-43 198-198-198-198 43-43 241 241-241 241Z" /></svg>
-                </div>
-                <div className={styles.skillBox}>
-                  <div className={styles.skill}>
-                    <p>#SKILL : {info && info.skill}</p>
-                  </div>
-                  <div className={styles.github}>
-                    <p>#GITHUB : <a href={`${info.github}`}
-                      target="_blank" rel="noopener noreferrer">{info && info.github}</a></p>
-                  </div>
-                  <div className={styles.url}>
-                    <p>#URL : <a href={`${info.url}`}
-                      target="_blank"  rel="noopener noreferrer">{info && info.url}</a></p>
-                  </div>
-                </div>
+                </Slider>
               </div>
+              <div className={styles.skillBox}>
+                {
+                  info.skill && info.skill.split(',').map((obj, key) => {
+                    return <p key={key}>#{obj}</p>
+                  })
+                }
+
+              </div>
+              <a href={`${info.url}`}
+                                    target="_blank" rel="noopener noreferrer"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 24 24"><path fill='white' d="M6 17c2.269-9.881 11-11.667 11-11.667v-3.333l7 6.637-7 6.696v-3.333s-6.17-.171-11 5zm12 .145v2.855h-16v-12h6.598c.768-.787 1.561-1.449 2.339-2h-10.937v16h20v-6.769l-2 1.914z"/></svg>
+                                    Site View</a>
             </div>
             <div className={styles.textBox}>
-              <p><b>Summary:</b>{info && info.summary}</p>
+              <p><b>기획의도: </b>{info.plan && info.plan}</p>
+              <p><b>기능: </b>{info.function && info.function}</p>
               <p><b>Review:</b>
                 {info && info.review}
               </p>

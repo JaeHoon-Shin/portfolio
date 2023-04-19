@@ -17,7 +17,7 @@ const Contact = () => {
             </div>
             <div className={styles.imgBox}>
               <figure>
-                <img src='./image/contact-img.gif' alt=''></img>
+                <img src={`${process.env.PUBLIC_URL}/image/contact-img.gif`} alt=''></img>
               </figure>
             </div>
           </div>

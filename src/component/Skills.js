@@ -17,7 +17,7 @@ const Skills = () => {
           <ul>
             <li>
               <figure>
-                <img src='./image/skills/react.svg' alt='react-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/react.svg`} alt='react-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -29,7 +29,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//next-js.svg' alt='next-js-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/next-js.svg`} alt='next-js-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -41,7 +41,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//js.svg' alt='js-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/js.svg`} alt='js-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -53,7 +53,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//html.svg' alt='html-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/html.svg`} alt='html-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -65,7 +65,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills/css.svg' alt='css-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/css.svg`} alt='css-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -77,7 +77,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills/sass.svg' alt='sass-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/sass.svg`} alt='sass-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -89,7 +89,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//ajax.svg' alt='ajax-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/ajax.svg`} alt='ajax-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -109,7 +109,7 @@ const Skills = () => {
           <ul>
             <li>
               <figure>
-                <img src='./image/skills//java.svg' alt='java-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/java.svg`} alt='java-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -121,7 +121,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//spring.svg' alt='spring-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/spring.svg`} alt='spring-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -133,7 +133,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-              <img src='./image/skills//express.svg' alt='express-logo'>
+              <img src={`${process.env.PUBLIC_URL}/image/skills/express.svg`} alt='express-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -153,7 +153,7 @@ const Skills = () => {
           <ul>
             <li>
               <figure>
-                <img src='./image/skills//oracle.svg' alt='oracle-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/oracle.svg`} alt='oracle-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -165,7 +165,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//mysql.svg' alt='mysql-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/mysql.svg`} alt='mysql-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -177,7 +177,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//amazon-S3.svg' alt='amazon-S3-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/amazon-S3.svg`} alt='amazon-S3-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -189,7 +189,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//vscode.svg' alt='vscode-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/vscode.svg`} alt='vscode-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -201,7 +201,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//figma.svg' alt='figma-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/figma.svg`} alt='figma-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -213,7 +213,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//git.svg' alt='git-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/git.svg`} alt='git-logo'>
                 </img>
               </figure>
               <figcaption>
@@ -225,7 +225,7 @@ const Skills = () => {
             </li>
             <li>
               <figure>
-                <img src='./image/skills//github.svg' alt='github-logo'>
+                <img src={`${process.env.PUBLIC_URL}/image/skills/github.svg`} alt='github-logo'>
                 </img>
               </figure>
               <figcaption>

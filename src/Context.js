@@ -29,7 +29,7 @@ const Context = ({ children }) => {
     const [isPopup, setPopup] = useState(false);
     const popUpBtn = () => {
         setPopup(true);
-        document.body.style.overflow = "hidden";
+        /* document.body.style.overflow = "hidden"; */
         projectRef.current?.scrollIntoView({ behavior: 'smooth' }); // 팝업 버튼 클릭시 해당 돔으로 스크롤 이동
     }
 
