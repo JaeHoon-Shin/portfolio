@@ -21,7 +21,7 @@ const Projectinfo = ({ Slider }) => {
     autoplay: true,
     autoplaySpeed: 5000
   }
-
+  
   return (
     <div className={`${styles.itemContainer} ${isPopup ? styles.active : ''}`} onClick={(e) => { closeBtn(e) }}>
       <article className={styles.infoBox}>
@@ -60,7 +60,7 @@ const Projectinfo = ({ Slider }) => {
             </div>
             <div className={styles.textBox}>
               <p><b>기획의도: </b>{info.plan && info.plan}</p>
-              <p><b>기능: </b>{info.function && info.function}</p>
+              <p ><b>기능: </b>{info.function && info.function}</p>
               <p><b>Review:</b>
                 {info && info.review}
               </p>

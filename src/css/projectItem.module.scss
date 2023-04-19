@@ -137,14 +137,14 @@ font-family: 'NanumSquareNeoHeavy';
 
 
                 >p {
-                    word-break: keep-all;
+                    word-break: normal;
                     letter-spacing: 0.1em;
                     font-size: 16px;
                     line-height: 30px;
                     font-family: 'NanumSquareNeo';
-
-                    &:nth-child(1) {
-                        margin-bottom: 25px;
+                    margin-bottom: 10px;
+                    &:nth-last-child(1){
+                        margin-bottom: 0
                     }
                 }
             }
@@ -242,14 +242,14 @@ font-family: 'NanumSquareNeoHeavy';
 
 
                     >p {
-                        word-break: keep-all;
+                        word-break: normal;
                         letter-spacing: 0.1em;
                         font-size: 14px;
                         line-height: 22px;
                         font-family: 'NanumSquareNeo';
-
-                        &:nth-child(1) {
-                            margin-bottom: 25px;
+                        margin-bottom: 10px;
+                        &:nth-last-child(1){
+                            margin-bottom: 0
                         }
                     }
                 }
@@ -379,14 +379,14 @@ font-family: 'NanumSquareNeoHeavy';
 
 
                     >p {
-                        word-break: keep-all;
+                        word-break: normal;
                         letter-spacing: 0.1em;
                         font-size: 12px;
                         line-height: 16px;
                         font-family: 'NanumSquareNeo';
-
-                        &:nth-child(1) {
-                            margin-bottom: 15px;
+                        margin-bottom: 10px;
+                        &:nth-last-child(1){
+                            margin-bottom: 0
                         }
                     }
                 }
@@ -516,14 +516,14 @@ font-family: 'NanumSquareNeoHeavy';
 
 
                     >p {
-                        word-break: keep-all;
+                        word-break: normal;
                         letter-spacing: 0.1em;
                         font-size: 12px;
                         line-height: 16px;
                         font-family: 'NanumSquareNeo';
-
-                        &:nth-child(1) {
-                            margin-bottom: 15px;
+                        margin-bottom: 10px;
+                        &:nth-last-child(1){
+                            margin-bottom: 0
                         }
                     }
                 }
@@ -651,14 +651,14 @@ font-family: 'NanumSquareNeoHeavy';
 
 
                     >p {
-                        word-break: keep-all;
+                        word-break: normal;
                         letter-spacing: 0.1em;
                         font-size: 12px;
                         line-height: 16px;
                         font-family: 'NanumSquareNeo';
-
-                        &:nth-child(1) {
-                            margin-bottom: 15px;
+                        margin-bottom: 10px;
+                        &:nth-last-child(1){
+                            margin-bottom: 0
                         }
                     }
                 }
