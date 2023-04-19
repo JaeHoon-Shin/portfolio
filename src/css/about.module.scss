@@ -1,0 +1,151 @@
+
+/*
+나눔 스퀘어
+font-family: 'NanumSquareNeoLight';
+font-family: 'NanumSquareNeo';
+font-family: 'NanumSquareNeoBold';
+font-family: 'NanumSquareNeoExtraBold';
+font-family: 'NanumSquareNeoHeavy'; 
+*/
+
+
+.aboutContainer{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    padding-top: 9.375rem;
+    >h3 {
+        font-size: 2.5rem;
+        font-family: 'NanumSquareNeoExtraBold';
+        margin-bottom: 3.125rem;
+    }
+    .content{
+        width: 100%;
+        padding:0 15.625rem; 
+        >span{
+            font-size: 2rem;
+            line-height: 2.375rem;
+            font-family: 'NanumSquareNeoBold';
+        }
+        >p{
+            font-family: 'NanumSquareNeoLight';
+            margin-top: 3.125rem;
+            line-height: 2.375rem;
+            font-size: 1.5rem;
+        }
+    }
+}
+@import './utils.scss';
+@include pc1{
+    .aboutContainer{
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding-top: 9.375rem;
+        >h3 {
+            font-size: 2.5rem;
+            font-family: 'NanumSquareNeoExtraBold';
+            margin-bottom: 3.125rem;
+        }
+        .content{
+            width: 100%;
+            padding:0 6.25rem; 
+            >span{
+                font-size: 2rem;
+                line-height: 2.375rem;
+                font-family: 'NanumSquareNeoBold';
+            }
+            >p{
+                font-family: 'NanumSquareNeoLight';
+                margin-top: 3.125rem;
+                line-height: 2.375rem;
+                font-size: 1.5rem;
+            }
+        }
+    }
+}
+@include tablet{
+    .aboutContainer{
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding-top: 9.375rem;
+        >h3 {
+            font-size: 2rem;
+            font-family: 'NanumSquareNeoExtraBold';
+            margin-bottom: 3.125rem;
+        }
+        .content{
+            width: 100%;
+            padding:0 6.25rem; 
+            >span{
+                font-size: 1.5rem;
+                line-height: 2.375rem;
+                font-family: 'NanumSquareNeoBold';
+            }
+            >p{
+                font-family: 'NanumSquareNeoLight';
+                margin-top: 3.125rem;
+                line-height: 2.375rem;
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
+@include mobile2{
+    .aboutContainer{
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding-top: 3.125rem;
+        >h3 {
+            font-size: 1.25rem;
+            font-family: 'NanumSquareNeoExtraBold';
+            margin-bottom: 1.5625rem;
+        }
+        .content{
+            width: 100%;
+            padding:0 2.25rem;
+            >span{
+                font-size: 1.125rem;
+                line-height: 1.625rem;
+                font-family: 'NanumSquareNeoBold';
+            }
+            >p{
+                font-family: 'NanumSquareNeoLight';
+                margin-top: 1.5625rem;
+                line-height: 1.625rem;
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
+/* 480 이하  */
+@include mobile1{
+    .aboutContainer{
+        width: 100%;
+        position: relative;
+        text-align: center;
+        padding-top: 1.5625rem;
+        >h3 {
+            font-size: 1.125rem;
+            font-family: 'NanumSquareNeoExtraBold';
+            margin-bottom: .9375rem;
+        }
+        .content{
+            width: 100%;
+            padding:0 1.25rem; 
+            >span{
+                font-size: .875rem;
+                line-height: 1.25rem;
+                font-family: 'NanumSquareNeoBold';
+            }
+            >p{
+                font-family: 'NanumSquareNeoLight';
+                margin-top: .9375rem;
+                line-height: 1.25rem;
+                font-size: .875rem;
+            }
+        }
+    }
+}

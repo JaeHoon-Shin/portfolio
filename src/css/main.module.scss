@@ -1,0 +1,1153 @@
+/*
+나눔 스퀘어
+font-family: 'NanumSquareNeoLight';
+font-family: 'NanumSquareNeo';
+font-family: 'NanumSquareNeoBold';
+font-family: 'NanumSquareNeoExtraBold';
+font-family: 'NanumSquareNeoHeavy'; 
+*/
+
+ul,
+li {
+    all: unset;
+}
+
+.mainContainer {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    height: 100vh;
+    font-family: 'NanumSquareNeo';
+
+    >.title {
+        position: absolute;
+        z-index: 12;
+        font-family: 'NanumSquareNeoBold';
+
+        >p {
+            font-family: auto;
+
+            &:nth-child(1) {
+
+                margin-left: 100px;
+                font-size: 200px;
+                color: black;
+                margin-bottom: 100px;
+            }
+
+            &:nth-child(2) {
+                margin-left: 200px;
+                font-size: 200px;
+                background-clip: text;
+                -webkit-background-clip: text;
+                color: transparent;
+                background-size: 100% 300%;
+                background-position-y: 0%;
+                animation: gradient 10s infinite linear forwards;
+                color: #f35626;
+                background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+                margin-bottom: 100px;
+            }
+        }
+    }
+
+
+    .leftBox {
+        width: 50%;
+        height: 100%;
+        position: relative;
+
+        .number {
+            font-family: "NanumSquareNeoHeavy";
+            position: absolute;
+            bottom: 200px;
+            left: 135px;
+            font-size: 300px;
+            color: red;
+            line-height: 360px;
+            letter-spacing: 0.5rem;
+            z-index: 1;
+        }
+
+        .phon {
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            color: #000;
+            font-size: 18px;
+            font-family: 'NanumSquareNeoBold';
+        }
+    }
+
+    .rightBox {
+        width: 50%;
+        height: 100%;
+        background-color: black;
+        position: relative;
+
+        >.informationBox {
+            margin: 180px 0px 0px 150px;
+
+            >.information {
+                display: flex;
+
+
+                >div {
+                    flex-shrink: 0;
+                    margin-right: 75px;
+
+                    >p {
+                        color: #ccc;
+                        font-size: 16px;
+                        margin-top: 20px;
+                        line-height: 25px;
+
+                        &:nth-child(1) {
+                            margin-top: 0px;
+                            font-size: 18px;
+                            color: #fff;
+                            font-family: 'NanumSquareNeoBold';
+                        }
+                    }
+                }
+            }
+        }
+
+
+        .pattern {
+            position: absolute;
+            bottom: 25%;
+            left: 0;
+            width: 500px;
+            height: 360px;
+            background: repeating-linear-gradient(90deg, #000, #000 10px, #fff 0, #fff 20px);
+        }
+
+        .email {
+            color: #fff;
+            position: absolute;
+            bottom: 50px;
+            left: 50px;
+            font-size: 18px;
+            font-family: 'NanumSquareNeoBold';
+        }
+    }
+
+    .bottomLogo {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 60px;
+        line-height: 73px;
+        position: absolute;
+        bottom: 50px;
+        right: 50px;
+        color: #fff;
+        z-index: 1;
+    }
+
+}
+
+@keyframes gradient {
+    from {
+        -webkit-filter: hue-rotate(0deg);
+    }
+
+    to {
+        -webkit-filter: hue-rotate(-360deg);
+    }
+}
+
+.viewContentInfoBox1 {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    transform: rotate(0.5turn);
+
+    >p {
+        color: #ccc;
+        font-size: 30px;
+        position: relative;
+        display: block;
+        writing-mode: vertical-lr;
+        padding-bottom: 25px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            right: 50%;
+            width: 2px;
+            height: 20px;
+            background-color: #ccc;
+            display: block;
+
+        }
+    }
+}
+
+/* 반응형 */
+
+@import './utils.scss';
+
+@include pc1 {
+    .mainContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        font-family: 'NanumSquareNeo';
+
+        >.title {
+            position: absolute;
+            z-index: 12;
+            font-family: 'NanumSquareNeoBold';
+
+            >p {
+                letter-spacing: 0.3rem;
+
+                &:nth-child(1) {
+                    font-family: 'NanumSquareNeoBold';
+                    margin-left: 50px;
+                    font-size: 100px;
+                    color: black;
+                    margin-bottom: 50px;
+                }
+
+                &:nth-child(2) {
+                    font-family: 'NanumSquareNeoBold';
+                    margin-left: 100px;
+                    font-size: 100px;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    background-size: 100% 300%;
+                    background-position-y: 0%;
+                    animation: gradient 10s infinite linear forwards;
+                    color: #f35626;
+                    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+                    margin-bottom: 0px;
+                }
+            }
+
+        }
+
+        .leftBox {
+            width: 50%;
+            height: 100%;
+            position: relative;
+
+            .number {
+                font-family: "NanumSquareNeoHeavy";
+                position: absolute;
+                bottom: 200px;
+                left: 70px;
+                font-size: 180px;
+                color: red;
+                line-height: 300px;
+                letter-spacing: 0.5rem;
+                z-index: 1;
+            }
+
+            .phon {
+                position: absolute;
+                bottom: 50px;
+                right: 50px;
+                color: #000;
+                font-size: 16px;
+                font-family: 'NanumSquareNeoBold';
+            }
+        }
+
+        .rightBox {
+            width: 50%;
+            height: 100%;
+            background-color: black;
+            position: relative;
+
+            >.informationBox {
+                margin: 150px 50px 0px 75px;
+
+
+                >.information {
+                    display: flex;
+
+
+                    >div {
+                        margin-right: .9375rem;
+
+                        &:nth-last-child(1) {
+                            display: flex;
+                            flex-direction: column;
+                            width: 185px;
+                        }
+
+                        >p {
+                            color: #ccc;
+                            font-size: 14px;
+                            margin-top: 10px;
+                            line-height: 20px;
+
+                            &:nth-child(1) {
+                                margin-top: 0px;
+                                font-size: 16px;
+                                color: #fff;
+                                font-family: 'NanumSquareNeoBold';
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .pattern {
+                position: absolute;
+                bottom: 25%;
+                left: 0;
+                width: 19.375rem;
+                height: 300px;
+                background: repeating-linear-gradient(90deg, #000, #000 10px, #fff 0, #fff 20px);
+            }
+
+            .email {
+                color: #fff;
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+                font-size: 16px;
+                font-family: 'NanumSquareNeoBold';
+            }
+        }
+
+        .bottomLogo {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 55px;
+            line-height: 73px;
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            color: #fff;
+            z-index: 1;
+        }
+
+    }
+
+    .viewContentInfoBox1 {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        transform: rotate(0.5turn);
+
+        >p {
+            color: #ccc;
+            font-size: 1.25rem;
+            position: relative;
+            display: block;
+            writing-mode: vertical-lr;
+            padding-bottom: 25px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 50%;
+                width: 2px;
+                height: 20px;
+                background-color: #ccc;
+                display: block;
+
+            }
+        }
+    }
+}
+
+@include pc2 {
+    .mainContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        font-family: 'NanumSquareNeo';
+
+        >.title {
+            position: absolute;
+            z-index: 12;
+            font-family: 'NanumSquareNeoBold';
+
+            >p {
+                letter-spacing: 0.3rem;
+
+                &:nth-child(1) {
+                    font-family: 'NanumSquareNeoBold';
+                    margin-left: 50px;
+                    font-size: 9.375rem;
+                    color: black;
+                    margin-bottom: 50px;
+                }
+
+                &:nth-child(2) {
+                    font-family: 'NanumSquareNeoBold';
+                    margin-left: 100px;
+                    font-size: 9.375rem;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    background-size: 100% 300%;
+                    background-position-y: 0%;
+                    animation: gradient 10s infinite linear forwards;
+                    color: #f35626;
+                    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+                    margin-bottom: 0px;
+                }
+            }
+
+        }
+
+        .leftBox {
+            width: 50%;
+            height: 100%;
+            position: relative;
+
+            .number {
+                font-family: "NanumSquareNeoHeavy";
+                position: absolute;
+                bottom: 200px;
+                left: 70px;
+                font-size: 180px;
+                color: red;
+                line-height: 300px;
+                letter-spacing: 0.5rem;
+                z-index: 1;
+            }
+
+            .phon {
+                position: absolute;
+                bottom: 50px;
+                right: 50px;
+                color: #000;
+                font-size: 16px;
+                font-family: 'NanumSquareNeoBold';
+            }
+        }
+
+        .rightBox {
+            width: 50%;
+            height: 100%;
+            background-color: black;
+            position: relative;
+
+            >.informationBox {
+                margin: 10.625rem 3.125rem 0px 5.625rem;
+
+
+                >.information {
+                    display: flex;
+
+
+                    >div {
+                        margin-right: 4.6875rem;
+
+                        &:nth-last-child(1) {
+                            display: flex;
+                            flex-direction: column;
+                            width: 185px;
+                        }
+
+                        >p {
+                            color: #ccc;
+                            font-size: 14px;
+                            margin-top: 10px;
+                            line-height: 20px;
+
+                            &:nth-child(1) {
+                                margin-top: 0px;
+                                font-size: 16px;
+                                color: #fff;
+                                font-family: 'NanumSquareNeoBold';
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .pattern {
+                position: absolute;
+                bottom: 25%;
+                left: 0;
+                width: 26.75rem;
+                height: 300px;
+                background: repeating-linear-gradient(90deg, #000, #000 10px, #fff 0, #fff 20px);
+            }
+
+            .email {
+                color: #fff;
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+                font-size: 16px;
+                font-family: 'NanumSquareNeoBold';
+            }
+        }
+
+        .bottomLogo {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 55px;
+            line-height: 73px;
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            color: #fff;
+            z-index: 1;
+        }
+
+    }
+
+    .viewContentInfoBox1 {
+        position: absolute;
+        top: 50px;
+        left: 50px;
+        transform: rotate(0.5turn);
+
+        >p {
+            color: #ccc;
+            font-size: 1.875rem;
+            position: relative;
+            display: block;
+            writing-mode: vertical-lr;
+            padding-bottom: 25px;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 50%;
+                width: 2px;
+                height: 20px;
+                background-color: #ccc;
+                display: block;
+
+            }
+        }
+    }
+}
+
+@include tablet {
+    .mainContainer {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        height: 100vh;
+        font-family: 'NanumSquareNeo';
+
+        >.title {
+            position: absolute;
+            z-index: 12;
+            
+            display: flex;
+            left: 0;
+            margin-left: 15%;
+
+            >p {
+
+                letter-spacing: 0.5rem;
+                font-family: 'NanumSquareNeoBold';
+                &:nth-child(1) {
+                 
+                    margin-left: 0px;
+                    font-size: 70px;
+                    color: black;
+                    margin-bottom: 0px;
+                    writing-mode: vertical-lr;
+                    text-orientation: upright;
+                    order: 2;
+                    margin-left: 3rem;
+                }
+                &:nth-child(2) {
+                    order: 1;
+                    font-size: 70px;
+                    background-clip: text;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    background-size: 100% 300%;
+                    background-position-y: 0%;
+                    writing-mode: vertical-lr;
+                    text-orientation: upright;
+                    animation: gradient 10s infinite linear forwards;
+                    color: #f35626;
+                    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+                    margin-top: 100px;
+                    margin-left: 0px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        .leftBox {
+            width: 50%;
+            height: 100%;
+            position: relative;
+
+            .number {
+                font-family: "NanumSquareNeoHeavy";
+                position: absolute;
+                bottom: 200px;
+                left: 130px;
+                font-size: 100px;
+                color: red;
+                line-height: 150px;
+                letter-spacing: 0.5rem;
+                z-index: 1;
+            }
+
+            .phon {
+                position: absolute;
+                bottom: 50px;
+                right: 50px;
+                color: #000;
+                font-size: 12px;
+                font-family: 'NanumSquareNeoBold';
+            }
+        }
+
+        .rightBox {
+            width: 50%;
+            height: 100%;
+            background-color: black;
+            position: relative;
+
+            >.informationBox {
+                margin: 6.25rem 0px 0px 3.125rem;
+
+
+                >.information {
+                    display: block;
+
+
+                    >div {
+                        margin-bottom: 30px;
+
+                        &:nth-last-child(1) {
+                            display: flex;
+                            flex-direction: column;
+
+                            >p {
+                                &:nth-child(2) {
+                                    margin-top: 10px;
+                                }
+                            }
+
+                        }
+
+                        >p {
+                            color: #ccc;
+                            font-size: 14px;
+                            margin-top: 5px;
+                            line-height: 24px;
+
+                            &:nth-child(1) {
+                                margin-top: 0px;
+                                font-size: 16px;
+                                line-height: 26px;
+                                color: #fff;
+                                font-family: 'NanumSquareNeoBold';
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .pattern {
+                position: absolute;
+                bottom: 25%;
+                left: 0;
+                width: 50%;
+                height: 150px;
+                background: repeating-linear-gradient(90deg, #000, #000 10px, #fff 0, #fff 20px);
+            }
+
+            .email {
+                color: #fff;
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+                font-size: 12px;
+                font-family: 'NanumSquareNeoBold';
+            }
+        }
+
+        .bottomLogo {
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 30px;
+            line-height: 30px;
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            color: #fff;
+            z-index: 1;
+        }
+
+    }
+
+    .viewContentInfoBox1 {
+        position: absolute;
+        top: 50px;
+        right: 50px;
+        transform: unset;
+        text-align: end;
+
+        >p {
+            color: #ccc;
+            font-size: 20px;
+            position: relative;
+            right: 0px;
+            display: block;
+
+            padding-bottom: 0px;
+            writing-mode: inherit;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 50%;
+                right: 70px;
+                width: 20px;
+                height: 2px;
+                background-color: #ccc;
+                display: block;
+
+            }
+        }
+    }
+
+}
+
+@include mobile2 {
+    .mainContainer {
+        width: 100%;
+        display: block;
+        font-family: 'NanumSquareNeo';
+        height: auto;
+
+        >.title {
+            padding-top: 8rem;
+            padding-bottom: 3.125rem;
+            position: unset;
+            z-index: 12;
+            font-family: 'NanumSquareNeoBold';
+            text-align: center;
+
+            >p {
+                font-family: auto;
+                font-weight: 700;
+                &:nth-child(1) {
+
+                    margin-left: 0px;
+                    font-size: 3.875rem;
+                    color: black;
+                    margin-bottom: 0px;
+                    padding-right: 0;
+                    padding-bottom: 1.25rem;
+                }
+
+                &:nth-child(2) {
+                    text-decoration: underline;
+                    text-underline-offset: 15px;
+                    padding-left: 0;
+                    margin-left: 0px;
+                    font-size: 3.875rem;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    background-size: 100% 300%;
+                    background-position-y: 0%;
+                    animation: gradient 10s infinite linear forwards;
+                    color: #f35626;
+                    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        /* >.mobileInformation {
+            display: none;
+            padding: 1.5625rem 2.25rem;
+            text-align: center;
+            
+            >div {
+
+                background-color: #F3F3F3;
+                padding: 15px 0.9375rem;
+                border-radius: 0.9375rem;
+
+                &:nth-child(1) {
+                    margin-right: 0;
+
+                    >div {
+                        margin-bottom: 10px;
+
+                        >p {
+                            font-size: 16px;
+                            line-height: 24px;
+                            &:nth-child(1) {
+                                
+                                font-size: 1rem;
+                                font-family: 'NanumSquareNeoBold';
+                                color: #000;
+                            }
+                        }
+                        &:nth-last-child(1) {
+                            margin-bottom: 0;
+                            >p {
+                                
+
+                                line-height: 24px;
+
+                                &:nth-last-child(1) {
+                                    margin-top: 10px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    >p {
+                        color: #000;
+                        font-size: .75rem;
+                        margin-top: .3125rem;
+                        line-height: 1rem;
+
+                        &:nth-child(1) {
+                            margin-top: 0px;
+                            font-size: .875rem;
+                            color: #000;
+                            font-family: 'NanumSquareNeoBold';
+                        }
+
+                        &:nth-last-child(1) {
+                            margin-top: .625rem;
+                        }
+                    }
+                }
+
+
+            }
+
+        } */
+
+        .leftBox {
+            width: 50%;
+            height: 100%;
+            position: relative;
+            display: none;
+
+            .number {
+                font-family: "NanumSquareNeoHeavy";
+                position: absolute;
+                bottom: 200px;
+                left: 135px;
+                font-size: 300px;
+                color: red;
+                line-height: 360px;
+                letter-spacing: 0.5rem;
+                z-index: 1;
+            }
+
+            .phon {
+                position: absolute;
+                bottom: 50px;
+                right: 50px;
+                color: #000;
+                font-size: 18px;
+                font-family: 'NanumSquareNeoBold';
+            }
+        }
+
+        .rightBox {
+            width: 50%;
+            height: 100%;
+            background-color: black;
+            position: relative;
+            display: none;
+
+            >.informationBox {
+                margin: 180px 0px 0px 150px;
+
+                >.information {
+                    display: flex;
+
+
+                    >div {
+                        flex-shrink: 0;
+                        margin-right: 75px;
+
+                        >p {
+                            color: #ccc;
+                            font-size: 16px;
+                            margin-top: 20px;
+                            line-height: 25px;
+
+                            &:nth-child(1) {
+                                margin-top: 0px;
+                                font-size: 18px;
+                                color: #fff;
+                                font-family: 'NanumSquareNeoBold';
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .pattern {
+                position: absolute;
+                bottom: 200px;
+                left: 0;
+                width: 500px;
+                height: 360px;
+                background: repeating-linear-gradient(90deg, #000, #000 10px, #fff 0, #fff 20px);
+            }
+
+            .email {
+                color: #fff;
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+                font-size: 18px;
+                font-family: 'NanumSquareNeoBold';
+            }
+        }
+
+        .bottomLogo {
+            display: none;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 60px;
+            line-height: 73px;
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            color: #fff;
+            z-index: 1;
+        }
+
+    }
+}
+
+@include mobile1 {
+    .mainContainer {
+        width: 100%;
+        display: block;
+        font-family: 'NanumSquareNeo';
+        height: auto;
+
+        >.title {
+            padding: 8rem 2.25rem 3.125rem;
+            position: unset;
+            z-index: 12;
+            font-family: 'NanumSquareNeoBold';
+            text-align: center;
+
+            >p {
+                font-family: auto;
+                font-weight: 700;
+               
+                &:nth-child(1) {
+                    margin-left: 0px;
+                    font-size: 1.875rem;
+                    color: black;
+                    margin-bottom: 0px;
+                    padding-right: 0;
+                    padding-bottom: 1.25rem;
+                }
+
+                &:nth-child(2) {
+                    text-decoration: underline;
+                    text-underline-offset: 5px;
+                    padding-left: 0;
+                    margin-left: 0px;
+                    font-size: 1.875rem;
+                    -webkit-background-clip: text;
+                    color: transparent;
+                    background-size: 100% 300%;
+                    background-position-y: 0%;
+                    animation: gradient 10s infinite linear forwards;
+                    color: #f35626;
+                    background-image: -webkit-linear-gradient(92deg, #f35626, #feab3a);
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        /* 
+        >.mobileInformation {
+            display: block;
+            padding: 1.5625rem 1.25rem;
+            text-align: center;
+
+            >div {
+
+                background-color: #F3F3F3;
+                padding: 15px 0.9375rem;
+                border-radius: 0.9375rem;
+
+                &:nth-child(1) {
+                    margin-right: 0;
+
+                    >div {
+                        margin-bottom: 10px;
+
+                        >p {
+                            font-size: 14px;
+                            line-height: 20px;
+                            &:nth-child(1) {
+                                
+                                font-size: 16px;
+                                font-family: 'NanumSquareNeoBold';
+                                color: #000;
+                            }
+                        }
+                        &:nth-last-child(1) {
+                            margin-bottom: 0;
+                            >p {
+
+                                &:nth-last-child(1) {
+                                    margin-top: 5px;
+                                }
+                            }
+                        }
+                    }
+                }
+
+                &:nth-child(2) {
+                    >p {
+                        color: #000;
+                        font-size: .75rem;
+                        margin-top: .3125rem;
+                        line-height: 1rem;
+
+                        &:nth-child(1) {
+                            margin-top: 0px;
+                            font-size: .875rem;
+                            color: #000;
+                            font-family: 'NanumSquareNeoBold';
+                        }
+
+                        &:nth-last-child(1) {
+                            margin-top: .625rem;
+                        }
+                    }
+                }
+
+
+            }
+
+        } */
+
+        .leftBox {
+            width: 50%;
+            height: 100%;
+            position: relative;
+            display: none;
+
+            .number {
+                font-family: "NanumSquareNeoHeavy";
+                position: absolute;
+                bottom: 200px;
+                left: 135px;
+                font-size: 300px;
+                color: red;
+                line-height: 360px;
+                letter-spacing: 0.5rem;
+                z-index: 1;
+            }
+
+            .phon {
+                position: absolute;
+                bottom: 50px;
+                right: 50px;
+                color: #000;
+                font-size: 18px;
+                font-family: 'NanumSquareNeoBold';
+            }
+        }
+
+        .rightBox {
+            width: 50%;
+            height: 100%;
+            background-color: black;
+            position: relative;
+            display: none;
+
+            >.informationBox {
+                margin: 180px 0px 0px 150px;
+
+                >.information {
+                    display: flex;
+
+
+                    >div {
+                        flex-shrink: 0;
+                        margin-right: 75px;
+
+                        >p {
+                            color: #ccc;
+                            font-size: 16px;
+                            margin-top: 20px;
+                            line-height: 25px;
+
+                            &:nth-child(1) {
+                                margin-top: 0px;
+                                font-size: 18px;
+                                color: #fff;
+                                font-family: 'NanumSquareNeoBold';
+                            }
+                        }
+                    }
+                }
+            }
+
+
+            .pattern {
+                position: absolute;
+                bottom: 200px;
+                left: 0;
+                width: 500px;
+                height: 360px;
+                background: repeating-linear-gradient(90deg, #000, #000 10px, #fff 0, #fff 20px);
+            }
+
+            .email {
+                color: #fff;
+                position: absolute;
+                bottom: 50px;
+                left: 50px;
+                font-size: 18px;
+                font-family: 'NanumSquareNeoBold';
+            }
+        }
+
+        .bottomLogo {
+            display: none;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 60px;
+            line-height: 73px;
+            position: absolute;
+            bottom: 50px;
+            right: 50px;
+            color: #fff;
+            z-index: 1;
+        }
+
+    }
+}

@@ -1,0 +1,45 @@
+//변수만 모아 놓는
+
+/*반응형 화면 크기*/
+$mobile: 480px ;
+$tablet: 768px ;
+$pc: 1024px;
+$pc2 : 1400px;
+/*반응형, 브라우저 크기가 480px 이하일때 모바일*/
+@mixin mobile1{
+    @media screen and (max-width: ($mobile - 1)){
+      @content;
+    }
+  }
+  
+  /*반응형, 브라우저 크기가 480이상, 767px 이하일때 태블릿*/
+  @mixin mobile2{
+    @media screen and (min-width: $mobile) and (max-width: ($tablet - 1) ){
+      @content;
+    }
+  }
+ /*반응형, 브라우저 크기가 1023px이하, 768px이상일때 태블릿*/
+ @mixin tablet{
+    @media screen and (min-width: $tablet) and (max-width: ($pc - 1)){
+      @content;
+    }
+  }
+  
+  /*반응형, 브라우저 크기가 1024px 이상일때 1400px이하*/
+  @mixin pc1{
+    @media screen and (min-width: $pc) and (max-width:($pc2 - 1) ){
+      @content;
+    }
+  }
+  @mixin pc2{
+    @media screen and (min-width: $pc2){
+      @content;
+    }
+  }
+  
+  /*넓이, 높이 자동 계산함수*/
+  @mixin square($size){
+    $calculated: 32px * $size;
+    width: $calculated;
+    height: $calculated;
+  }

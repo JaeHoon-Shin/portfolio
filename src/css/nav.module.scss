@@ -1,0 +1,343 @@
+/*
+나눔 스퀘어
+font-family: 'NanumSquareNeoLight';
+font-family: 'NanumSquareNeo';
+font-family: 'NanumSquareNeoBold';
+font-family: 'NanumSquareNeoExtraBold';
+font-family: 'NanumSquareNeoHeavy'; 
+*/
+.navContainer {
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100%;
+    z-index: 999;
+
+    >.navName {
+        position: absolute;
+        height: 100%;
+        top: 50px;
+        left: 50px;
+        display: block;
+
+        >p {
+            transform: rotate(180deg);
+            font-family: "NanumSquareNeoExtraBold";
+
+            font-size: 30px;
+            position: relative;
+            display: block;
+            writing-mode: vertical-lr;
+            padding-bottom: 25px;
+            transition: 0.3s;
+            z-index: 3;
+            color: #f35626;
+
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                right: 50%;
+                width: 2px;
+                height: 20px;
+                background-color: #f35626;
+
+                display: block;
+
+
+            }
+
+        }
+
+        &.active {
+            display: none;
+            transition: 0.3s;
+            z-index: -10;
+
+        }
+
+    }
+
+    >.menu {
+        transition: 0.3s;
+        z-index: -999;
+        height: 100%;
+        width: 0px;
+        background-color: rgba(0, 1, 82);
+        position: absolute;
+        left: 0;
+        top: 0;
+
+        >div {
+            display: none;
+            padding: 50px;
+            height: 100%;
+
+            >p {
+                font-family: "NanumSquareNeo";
+                color: #fff;
+                font-size: 30px;
+                padding-bottom: 20px;
+                cursor: pointer;
+            }
+        }
+
+        &.active {
+            display: block;
+            z-index: 10;
+            width: 250px;
+            transition: 0.3s;
+
+            >div {
+                display: block;
+            }
+        }
+    }
+
+    
+}
+.mobileNavContainer{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    z-index: 999;
+    display: none;
+    .mobileNav {
+        position: absolute;
+        top:0;
+        left: 0;
+        display: flex;
+        background-color: rgba(0, 1, 82);
+        width: 100%;
+        height: 50px;
+        align-items: center;
+        justify-content: center;
+            >p {
+
+                color: #fff;
+                font-family: "NanumSquareNeo";
+                margin: 0 5px;
+                font-size: 12px;
+                &.active{
+                    color: #f35626;
+                }
+            }
+        
+        
+    }
+}
+
+/* 반응형 */
+
+@import './utils.scss';
+
+@include pc1 {
+    .navContainer {
+        >.navName {
+            top: 30px;
+            left: 30px;
+            >p {
+                transform: rotate(180deg);
+                font-family: "NanumSquareNeoExtraBold";
+                font-size: 20px;
+                position: relative;
+                display: block;
+                writing-mode: vertical-lr;
+                padding-bottom: 25px;
+                transition: 0.3s;
+                z-index: 3;
+                color: #f35626;
+
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 50%;
+                    width: 2px;
+                    height: 20px;
+                    background-color: #f35626;
+                    display: block;
+                }
+
+            }
+
+        }
+
+        >.menu {
+            >div {
+                display: none;
+                padding: 40px;
+                height: 100%;
+            }
+
+            &.active {
+                width: 200px;
+            }
+        }
+    }
+}
+
+@include tablet {
+    .navContainer {
+        position: fixed;
+        left: 0;
+        top: 0;
+        height: 100%;
+        z-index: 20;
+
+        >.navName {
+            position: absolute;
+            height: 100%;
+            top: 30px;
+            left: 30px;
+            display: block;
+
+            >p {
+                transform: rotate(180deg);
+                font-family: "NanumSquareNeoExtraBold";
+                font-size: 20px;
+                position: relative;
+                display: block;
+                writing-mode: vertical-lr;
+                padding-bottom: 25px;
+                transition: 0.3s;
+                z-index: 3;
+                color: #f35626;
+
+                cursor: pointer;
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    bottom: 0;
+                    right: 50%;
+                    width: 2px;
+                    height: 20px;
+                    background-color: #f35626;
+                    display: block;
+                }
+
+            }
+
+            &.active {
+                display: none;
+                transition: 0.3s;
+                z-index: -10;
+            }
+        }
+
+        >.menu {
+            transition: 0.3s;
+            z-index: -999;
+            height: 100%;
+            width: 0px;
+            background-color: rgba(0, 1, 82);
+            position: absolute;
+            left: 0;
+            top: 0;
+
+            >div {
+                display: none;
+                padding: 20px;
+                height: 100%;
+
+                >p {
+                    font-family: "NanumSquareNeo";
+                    color: #fff;
+                    font-size: 20px;
+                    padding-bottom: 20px;
+                    cursor: pointer;
+                }
+            }
+
+            &.active {
+                display: block;
+                z-index: 10;
+                width: 150px;
+                transition: 0.3s;
+
+                >div {
+                    display: block;
+                }
+            }
+        }
+    }
+}
+
+@include mobile2 {
+    .navContainer {
+        display: none;
+        
+    }
+
+    .mobileNavContainer{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 20;
+        display: block;
+        .mobileNav {
+            position: absolute;
+            top:0;
+            left: 0;
+            display: flex;
+            background-color: rgba(0, 1, 82);
+            width: 100%;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+                >p {
+    
+                    color: #fff;
+                    font-family: "NanumSquareNeo";
+                    margin: 0 5px;
+                    font-size: 12px;
+ 
+                }
+            
+            
+        }
+    }
+}
+@include mobile1 {
+    .navContainer {
+        display: none;
+        
+    }
+
+    .mobileNavContainer{
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 100%;
+        z-index: 20;
+        display: block;
+        .mobileNav {
+            position: absolute;
+            top:0;
+            left: 0;
+            display: flex;
+            background-color: rgba(0, 1, 82);
+            width: 100%;
+            height: 50px;
+            align-items: center;
+            justify-content: center;
+                >p {
+    
+                    color: #fff;
+                    font-family: "NanumSquareNeo";
+                    margin: 0 5px;
+                    font-size: 12px;
+        
+                }
+            
+            
+        }
+    }
+}

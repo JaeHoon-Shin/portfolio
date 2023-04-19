@@ -1,0 +1,1249 @@
+/*
+나눔 스퀘어
+font-family: 'NanumSquareNeoLight';
+font-family: 'NanumSquareNeo';
+font-family: 'NanumSquareNeoBold';
+font-family: 'NanumSquareNeoExtraBold';
+font-family: 'NanumSquareNeoHeavy'; 
+*/
+
+p {
+    word-break: normal;
+}
+
+.testContainer {
+    position: relative;
+    background-color: #000;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+
+    >.contentBox {
+
+        position: relative;
+        padding-left: 15%;
+        overflow: hidden;
+
+        >div {
+            display: flex;
+
+
+            >.textBox {
+                width: 32%;
+                color: #fff;
+                position: relative;
+
+                >.infoHeader {
+                    margin-bottom: 50px;
+
+                    .name {
+                        margin-top: 0px;
+                        font-size: 75px;
+                        font-family: "NanumSquareNeoExtraBold";
+                        line-height: 100px;
+                        color: #fff;
+                        margin-bottom: 10px;
+                    }
+
+                    >.skillBox {
+                        width: 60%;
+                        display: flex;
+                        flex-wrap: wrap;
+
+                        >p {
+                            cursor: pointer;
+                            font-size: 12px;
+                            color: #A6A6A6;
+                            letter-spacing: 0.1em;
+                            padding: 5px 10px;
+                            background: rgb(95 91 114 / 50%);
+                            margin: 5px 15px 0 0;
+                            border-radius: 5px;
+                            transition: 0.5s;
+
+                            &:hover {
+                                transition: 0.5s;
+                                transform: scale(1.2);
+                            }
+                        }
+                    }
+                }
+
+                >.infoBox {
+                    margin-bottom: 35px;
+
+                    >p {
+                        font-size: 16px;
+                        line-height: 28px;
+                        letter-spacing: 0.05em;
+                        color: #A6A6A6;
+                    }
+                }
+
+                >.urlBox {
+
+                    display: flex;
+
+                    >a {
+                        margin-right: 10px;
+                        padding: 5px 10px;
+                        text-decoration: none;
+                        display: flex;
+                        align-items: center;
+
+                        >svg {
+                            margin-right: 5px;
+                        }
+
+                        color: whitesmoke;
+
+
+                        &:hover {
+                            color: rgb(255 177 0);
+
+
+                            >svg {
+                                >path {
+                                    fill: rgb(255 177 0);
+                                }
+
+                            }
+                        }
+                    }
+
+                    >button {
+                        background-color: white;
+                        padding: 3px;
+                        margin-right: 5px;
+
+                        >a {
+                            color: #000;
+                        }
+                    }
+
+
+                }
+
+                >button {
+                    all: unset;
+                    cursor: pointer;
+                    padding: 10px 20px;
+                    background-color: rgb(255, 255, 255);
+                    font-family: "NanumSquareNeoExtraBold";
+                    color: rgb(0, 0, 0)
+                }
+
+            }
+
+            >.thumbBox {
+                width: 65%;
+                overflow: hidden;
+            }
+
+        }
+
+    }
+
+    .btnBox {
+        display: flex;
+        align-items: center;
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+
+        >.btn {
+            cursor: pointer;
+            position: relative;
+            margin: 5px;
+            width: 50px;
+            height: 50px;
+            background-color: rgba($color: #cfcfcff6, $alpha: 0.4);
+            border-radius: 25px;
+
+            >img {
+                width: 50%;
+                height: 100%;
+                margin: auto;
+                display: block;
+                position: relative;
+                bottom: 0;
+                left: 0;
+            }
+
+            &:hover {
+                background-color: rgba($color: #fcfcfcf6, $alpha: 0.7);
+            }
+        }
+
+        .prev {
+            img {
+                transform: scaleX(-1);
+            }
+        }
+    }
+
+    .numberBox {
+        display: flex;
+        position: absolute;
+        right: 10%;
+        bottom: 13%;
+        justify-content: space-between;
+        width: 120px;
+
+        &::before {
+            content: "";
+            display: block;
+            width: 80px;
+            height: 1px;
+            position: absolute;
+            bottom: 50%;
+            left: 20px;
+            background-color: #fff;
+        }
+
+        >p {
+            display: block;
+            width: 10%;
+
+            &:nth-child(1) {
+                color: #fff;
+
+            }
+
+            &:nth-child(2) {
+
+                color: #A6A6A6
+            }
+        }
+
+    }
+}
+
+@import './utils.scss';
+
+@include pc2 {
+    .testContainer {
+        position: relative;
+        background-color: #000;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        >.contentBox {
+
+            position: relative;
+            padding: 0 9.375rem;
+            overflow: hidden;
+
+            >div {
+                display: flex;
+
+                >.textBox {
+                    width: 45%;
+                    color: #fff;
+                    position: relative;
+                    margin-right: 20px;
+
+                    >.infoHeader {
+                        margin-bottom: 50px;
+
+                        .name {
+                            margin-top: 0px;
+                            font-size: 4.6875rem;
+                            font-family: "NanumSquareNeoExtraBold";
+                            line-height: 6.25rem;
+                            color: #fff;
+                            margin-bottom: 10px;
+                        }
+
+                        >.skillBox {
+                            width: 60%;
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            >p {
+                                cursor: pointer;
+                                font-size: 12px;
+                                color: #A6A6A6;
+                                letter-spacing: 0.1em;
+                                padding: 5px 10px;
+                                background: rgb(95 91 114 / 50%);
+                                margin: 5px 15px 0 0;
+                                border-radius: 5px;
+                                transition: 0.5s;
+
+                                &:hover {
+                                    transition: 0.5s;
+                                    transform: scale(1.2);
+                                }
+                            }
+                        }
+                    }
+
+                    >.infoBox {
+                        margin-bottom: 50px;
+
+                        >p {
+                            font-size: 16px;
+                            line-height: 28px;
+                            letter-spacing: 0.05em;
+                            color: #A6A6A6;
+                        }
+                    }
+
+                    >.urlBox {
+                        margin-bottom: 50px;
+
+                        display: flex;
+
+                        >a {
+                            margin-right: 10px;
+                            padding: 5px 10px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+
+                            >svg {
+                                margin-right: 5px;
+                            }
+
+                            color: whitesmoke;
+
+                            &:hover {
+                                color: rgb(255 177 0);
+
+                                >svg {
+                                    >path {
+                                        fill: rgb(255 177 0);
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    >button {
+                        all: unset;
+                        cursor: pointer;
+                        padding: 10px 20px;
+                        background-color: #ff0000cf;
+                        font-family: "NanumSquareNeoExtraBold";
+                        color: #fff
+                    }
+
+                }
+
+                >.thumbBox {
+                    width: 50%;
+                    overflow: hidden;
+                }
+
+            }
+
+        }
+
+        .btnBox {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+
+            >.btn {
+                cursor: pointer;
+                position: relative;
+                margin: 5px;
+                width: 50px;
+                height: 50px;
+                background-color: rgba($color: #cfcfcff6, $alpha: 0.4);
+                border-radius: 25px;
+
+                >img {
+                    width: 50%;
+                    height: 100%;
+                    margin: auto;
+                    display: block;
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:hover {
+                    background-color: rgba($color: #fcfcfcf6, $alpha: 0.7);
+                }
+            }
+
+            .prev {
+                img {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+
+        .numberBox {
+            display: flex;
+            position: absolute;
+            right: 10%;
+            bottom: 13%;
+            justify-content: space-between;
+            width: 120px;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 80px;
+                height: 1px;
+                position: absolute;
+                bottom: 50%;
+                left: 20px;
+                background-color: #fff;
+            }
+
+            >p {
+                display: block;
+                width: 10%;
+
+                &:nth-child(1) {
+                    color: #fff;
+
+                }
+
+                &:nth-child(2) {
+
+                    color: #A6A6A6
+                }
+            }
+
+        }
+    }
+}
+
+@include pc1 {
+    .testContainer {
+        position: relative;
+        background-color: #000;
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        >.contentBox {
+
+            position: relative;
+            padding: 0 6.25rem;
+            overflow: hidden;
+
+            >div {
+                display: flex;
+
+                justify-content: space-between;
+
+                >.textBox {
+                    width: 40%;
+                    color: #fff;
+                    position: relative;
+
+                    >.infoHeader {
+                        margin-bottom: 1.875rem;
+
+                        .name {
+                            margin-top: 0px;
+                            font-size: 3.125rem;
+                            font-family: "NanumSquareNeoExtraBold";
+                            line-height: 4.6875rem;
+                            color: #fff;
+                            margin-bottom: 10px;
+                        }
+
+                        >.skillBox {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            >p {
+                                cursor: pointer;
+                                font-size: 12px;
+                                color: #A6A6A6;
+                                letter-spacing: 0.1em;
+                                padding: 5px 10px;
+                                background: rgb(95 91 114 / 50%);
+                                margin: 5px 15px 0 0;
+                                border-radius: 5px;
+                                transition: 0.5s;
+
+                                &:hover {
+                                    transition: 0.5s;
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+
+                    >.infoBox {
+                        margin-bottom: 1.875rem;
+
+                        >p {
+                            font-size: 16px;
+                            line-height: 28px;
+                            letter-spacing: 0.05em;
+                            color: #A6A6A6;
+                        }
+                    }
+
+                    >.urlBox {
+                        margin-bottom: 1.875rem;
+                        display: flex;
+
+                        >a {
+                            margin-right: 10px;
+                            padding: 5px 10px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+
+                            >svg {
+                                margin-right: 5px;
+                            }
+
+                            color: whitesmoke;
+
+
+                            &:hover {
+                                color: rgb(255 177 0);
+
+
+                                >svg {
+                                    >path {
+                                        fill: rgb(255 177 0);
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    >button {
+                        all: unset;
+                        cursor: pointer;
+                        padding: 10px 20px;
+                        background-color: #ff0000cf;
+                        font-family: "NanumSquareNeoExtraBold";
+                        color: #fff
+                    }
+
+                }
+
+                >.thumbBox {
+                    width: 53%;
+                    overflow: hidden;
+                }
+
+            }
+
+        }
+
+        .btnBox {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+
+            >.btn {
+                cursor: pointer;
+                position: relative;
+                margin: 5px;
+                width: 50px;
+                height: 50px;
+                background-color: rgba($color: #cfcfcff6, $alpha: 0.4);
+                border-radius: 25px;
+
+                >img {
+                    width: 50%;
+                    height: 100%;
+                    margin: auto;
+                    display: block;
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:hover {
+                    background-color: rgba($color: #fcfcfcf6, $alpha: 0.7);
+                }
+            }
+
+            .prev {
+                img {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+
+        .numberBox {
+            display: flex;
+            position: absolute;
+            right: 10%;
+            bottom: 13%;
+            justify-content: space-between;
+            width: 120px;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 80px;
+                height: 1px;
+                position: absolute;
+                bottom: 50%;
+                left: 20px;
+                background-color: #fff;
+            }
+
+            >p {
+                display: block;
+                width: 10%;
+
+                &:nth-child(1) {
+                    color: #fff;
+
+                }
+
+                &:nth-child(2) {
+
+                    color: #A6A6A6
+                }
+            }
+
+        }
+    }
+}
+
+@include tablet {
+    .testContainer {
+        position: relative;
+        background-color: #000;
+        height: 60vh;
+        width: 100%;
+        display: flex;
+        align-items: center;
+
+        >.contentBox {
+            position: relative;
+            padding: 0 6.25rem;
+            overflow: hidden;
+
+            >div {
+                display: flex;
+
+                justify-content: space-between;
+
+                >.textBox {
+                    width: 45%;
+                    color: #fff;
+                    position: relative;
+
+                    /* display: none; */
+                    >.infoHeader {
+                        margin-bottom: 10px;
+
+                        .name {
+                            margin-top: 0px;
+                            font-size: 2.5rem;
+                            font-family: "NanumSquareNeoExtraBold";
+                            line-height: 2.5rem;
+                            color: #fff;
+                            margin-bottom: 5px;
+                        }
+
+                        >.skillBox {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            >p {
+                                cursor: pointer;
+                                font-size: 12px;
+                                color: #A6A6A6;
+                                letter-spacing: 0.1em;
+                                padding: 5px 5px;
+                                background: rgb(95 91 114 / 50%);
+                                margin: 5px 10px 0 0;
+                                border-radius: 5px;
+                                transition: 0.5s;
+
+                                &:hover {
+                                    transition: 0.5s;
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+
+                    >.infoBox {
+                        margin-bottom: 10px;
+
+                        >p {
+                            font-size: .875rem;
+                            line-height: 1.25rem;
+                            letter-spacing: 0.05em;
+                            color: #A6A6A6;
+                        }
+                    }
+
+                    >.urlBox {
+                        margin-bottom: 10px;
+                        display: flex;
+
+                        >a {
+                            margin-right: 10px;
+                            padding: 4px 4px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            font-size: 10px;
+
+                            >svg {
+                                margin-right: 5px;
+                            }
+
+                            color: whitesmoke;
+
+
+                            &:hover {
+                                color: rgb(255 177 0);
+
+
+                                >svg {
+                                    >path {
+                                        fill: rgb(255 177 0);
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    >button {
+                        all: unset;
+                        cursor: pointer;
+                        padding: 10px 15px;
+                        background-color: #ff0000cf;
+                        font-family: "NanumSquareNeoExtraBold";
+                        color: #fff;
+                        font-size: .875rem;
+                    }
+
+                }
+
+                >.thumbBox {
+                    width: 53%;
+                    overflow: hidden;
+                }
+
+            }
+
+        }
+
+        .btnBox {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 10%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+
+            >.btn {
+                cursor: pointer;
+                position: relative;
+                margin: 5px;
+                width: 35px;
+                height: 35px;
+                background-color: rgba($color: #cfcfcff6, $alpha: 0.4);
+                border-radius: 25px;
+
+                >img {
+                    width: 50%;
+                    height: 100%;
+                    margin: auto;
+                    display: block;
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:hover {
+                    background-color: rgba($color: #fcfcfcf6, $alpha: 0.7);
+                }
+            }
+
+            .prev {
+                img {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+
+        .numberBox {
+            display: flex;
+            position: absolute;
+            right: 10%;
+            bottom: 13%;
+            justify-content: space-between;
+            width: 120px;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 80px;
+                height: 1px;
+                position: absolute;
+                bottom: 50%;
+                left: 20px;
+                background-color: #fff;
+            }
+
+            >p {
+                display: block;
+                width: 10%;
+
+                &:nth-child(1) {
+                    color: #fff;
+
+                }
+
+                &:nth-child(2) {
+
+                    color: #A6A6A6
+                }
+            }
+
+        }
+    }
+}
+
+@include mobile2 {
+
+    .testContainer {
+        position: relative;
+        background-color: #000;
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 20% 0;
+
+        >.contentBox {
+            position: relative;
+            padding: 0 2.25rem;
+            overflow: hidden;
+
+            >div {
+                display: block;
+
+                >.textBox {
+                    width: 100%;
+                    color: #fff;
+                    position: relative;
+                    margin-bottom: 30px;
+                    height: 300px;
+
+                    >.infoHeader {
+                        margin-bottom: 15px;
+
+                        .name {
+                            margin-top: 0px;
+                            font-size: 2.5rem;
+                            font-family: "NanumSquareNeoExtraBold";
+                            line-height: 2.5rem;
+                            color: #fff;
+                            margin-bottom: 10px;
+                        }
+
+                        >.skillBox {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            >p {
+                                cursor: pointer;
+                                font-size: 10px;
+                                color: #A6A6A6;
+                                letter-spacing: 0.1em;
+                                padding: 5px 5px;
+                                background: rgb(95 91 114 / 50%);
+                                margin: 5px 10px 0 0;
+                                border-radius: 5px;
+                                transition: 0.5s;
+
+                                &:hover {
+                                    transition: 0.5s;
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+
+                    >.infoBox {
+                        margin-bottom: 15px;
+
+                        >p {
+                            font-size: .875rem;
+                            line-height: 1.25rem;
+                            letter-spacing: 0.05em;
+                            color: #A6A6A6;
+                        }
+                    }
+
+                    >.urlBox {
+                        margin-bottom: 15px;
+                        display: flex;
+
+                        >a {
+                            font-size: .875rem;
+                            margin-right: 10px;
+                            padding: 5px 10px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+
+                            >svg {
+                                margin-right: 5px;
+                            }
+
+                            color: whitesmoke;
+
+
+                            &:hover {
+                                color: rgb(255 177 0);
+
+
+                                >svg {
+                                    >path {
+                                        fill: rgb(255 177 0);
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    >button {
+                        all: unset;
+                        cursor: pointer;
+                        padding: 10px 15px;
+                        background-color: #ff0000cf;
+                        font-family: "NanumSquareNeoExtraBold";
+                        color: #fff;
+                        font-size: .875rem;
+                    }
+
+                }
+
+                >.thumbBox {
+                    width: 100%;
+                    overflow: hidden;
+                }
+
+            }
+
+        }
+
+        .btnBox {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+
+            >.btn {
+                cursor: pointer;
+                position: relative;
+                margin: 5px;
+                width: 25px;
+                height: 25px;
+                background-color: rgba($color: #cfcfcff6, $alpha: 0.4);
+                border-radius: 25px;
+
+                >img {
+                    width: 50%;
+                    height: 100%;
+                    margin: auto;
+                    display: block;
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:hover {
+                    background-color: rgba($color: #fcfcfcf6, $alpha: 0.7);
+                }
+            }
+
+            .prev {
+                img {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+
+        .numberBox {
+            display: flex;
+            position: absolute;
+            right: 10%;
+            bottom: 7%;
+            justify-content: space-between;
+            width: 75px;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 1px;
+                position: absolute;
+                bottom: 50%;
+                left: 12px;
+                background-color: #fff;
+            }
+
+            >p {
+                display: block;
+                width: 10px;
+                font-size: 12px;
+
+                &:nth-child(1) {
+                    color: #fff;
+
+                }
+
+                &:nth-child(2) {
+
+                    color: #A6A6A6
+                }
+            }
+
+        }
+    }
+
+}
+
+@include mobile1 {
+
+    .testContainer {
+        position: relative;
+        background-color: #000;
+        height: auto;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        padding: 20% 0;
+
+        >.contentBox {
+            position: relative;
+            padding: 0 1.25rem;
+            overflow: hidden;
+
+            >div {
+                display: block;
+
+                >.textBox {
+                    width: 100%;
+                    color: #fff;
+                    position: relative;
+                    margin-bottom: 20px;
+                    padding: 0 15px;
+                    height: 270px;
+
+                    >.infoHeader {
+                        margin-bottom: 15px;
+
+                        .name {
+                            margin-top: 0px;
+                            font-size: 30px;
+                            font-family: "NanumSquareNeoExtraBold";
+                            line-height: 30px;
+                            color: #fff;
+                            margin-bottom: 5px;
+                        }
+
+                        >.skillBox {
+                            width: 100%;
+                            display: flex;
+                            flex-wrap: wrap;
+
+                            >p {
+                                cursor: pointer;
+                                font-size: 8px;
+                                color: #A6A6A6;
+                                letter-spacing: 0.1em;
+                                padding: 3px 3px;
+                                background: rgb(95 91 114 / 50%);
+                                margin: 5px 10px 0 0;
+                                border-radius: 5px;
+                                transition: 0.5s;
+
+                                &:hover {
+                                    transition: 0.5s;
+                                    transform: scale(1);
+                                }
+                            }
+                        }
+                    }
+
+                    >.infoBox {
+                        margin-bottom: 20px;
+
+                        >p {
+                            font-size: 12px;
+                            line-height: 1.25rem;
+                            letter-spacing: 0.05em;
+                            color: #A6A6A6;
+                        }
+                    }
+
+                    >.urlBox {
+                        margin-bottom: 20px;
+
+                        display: flex;
+
+                        >a {
+                            margin-right: 10px;
+                            padding: 5px 10px;
+                            text-decoration: none;
+                            display: flex;
+                            align-items: center;
+                            font-size: 12px;
+
+                            >svg {
+                                margin-right: 5px;
+                                width: 15px;
+                                height: 15px;
+                            }
+
+                            color: whitesmoke;
+
+
+                            &:hover {
+                                color: rgb(255 177 0);
+
+
+                                >svg {
+                                    >path {
+                                        fill: rgb(255 177 0);
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+
+                    >button {
+                        all: unset;
+                        cursor: pointer;
+                        padding: 5px 10px;
+                        background-color: red;
+                        font-family: "NanumSquareNeoExtraBold";
+                        color: #fff;
+                        font-size: 12px;
+                    }
+
+                }
+
+                >.thumbBox {
+                    width: 100%;
+                    overflow: hidden;
+                }
+
+            }
+
+        }
+
+        .btnBox {
+            display: flex;
+            align-items: center;
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+
+            >.btn {
+                cursor: pointer;
+                position: relative;
+                margin: 5px;
+                width: 25px;
+                height: 25px;
+                background-color: rgba($color: #cfcfcff6, $alpha: 0.4);
+                border-radius: 25px;
+
+                >img {
+                    width: 50%;
+                    height: 100%;
+                    margin: auto;
+                    display: block;
+                    position: relative;
+                    bottom: 0;
+                    left: 0;
+                }
+
+                &:hover {
+                    background-color: rgba($color: #fcfcfcf6, $alpha: 0.7);
+                }
+            }
+
+            .prev {
+                img {
+                    transform: scaleX(-1);
+                }
+            }
+        }
+
+        .numberBox {
+            display: flex;
+            position: absolute;
+            right: 10%;
+            bottom: 7%;
+            justify-content: space-between;
+            width: 75px;
+
+            &::before {
+                content: "";
+                display: block;
+                width: 50px;
+                height: 1px;
+                position: absolute;
+                bottom: 50%;
+                left: 12px;
+                background-color: #fff;
+            }
+
+            >p {
+                display: block;
+                width: 10px;
+                font-size: 12px;
+
+                &:nth-child(1) {
+                    color: #fff;
+
+                }
+
+                &:nth-child(2) {
+
+                    color: #A6A6A6
+                }
+            }
+
+        }
+    }
+
+}
