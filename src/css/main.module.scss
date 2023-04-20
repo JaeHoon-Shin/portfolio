@@ -30,7 +30,7 @@ li {
             &:nth-child(1) {
 
                 margin-left: 100px;
-                font-size: 200px;
+                font-size: 50px;
                 color: black;
                 margin-bottom: 100px;
             }
@@ -202,20 +202,20 @@ li {
             position: absolute;
             z-index: 12;
             font-family: 'NanumSquareNeoBold';
-
+            top:44%;
             >p {
                 letter-spacing: 0.3rem;
 
                 &:nth-child(1) {
-                    font-family: 'NanumSquareNeoBold';
+                    font-family: 'NanumSquareNeoHeavy';
                     margin-left: 50px;
-                    font-size: 100px;
+                    font-size: 40px;
                     color: black;
-                    margin-bottom: 50px;
+                    margin-bottom: 25px;
                 }
 
                 &:nth-child(2) {
-                    font-family: 'NanumSquareNeoBold';
+                    font-family: 'NanumSquareNeoHeavy';
                     margin-left: 100px;
                     font-size: 100px;
                     background-clip: text;
@@ -302,10 +302,10 @@ li {
 
             .pattern {
                 position: absolute;
-                bottom: 25%;
+                bottom: 33%;
                 left: 0;
                 width: 19.375rem;
-                height: 300px;
+                height: 200px;
                 background: repeating-linear-gradient(90deg, #000, #000 10px, #fff 0, #fff 20px);
             }
 
@@ -375,20 +375,20 @@ li {
             position: absolute;
             z-index: 12;
             font-family: 'NanumSquareNeoBold';
-
+            top: 45%;
             >p {
                 letter-spacing: 0.3rem;
 
                 &:nth-child(1) {
-                    font-family: 'NanumSquareNeoBold';
+                    font-family: 'NanumSquareNeoHeavy';
                     margin-left: 50px;
-                    font-size: 9.375rem;
+                    font-size: 50px;
                     color: black;
-                    margin-bottom: 50px;
+                    margin-bottom: 25px;
                 }
 
                 &:nth-child(2) {
-                    font-family: 'NanumSquareNeoBold';
+                    font-family: 'NanumSquareNeoHeavy';
                     margin-left: 100px;
                     font-size: 9.375rem;
                     background-clip: text;
