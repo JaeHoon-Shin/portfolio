@@ -60,13 +60,13 @@
 
 .detailSlider .slick-slide div>figure {
   width: 100%;
-  height: 350px;
+  height: 300px;
 }
 
 .detailSlider .slick-slide img {
   width: 100%;
   height: 100%;
-  object-fit: fill;
+  object-fit: contain;
 }
 .detailSlider .slick-track {
   cursor: auto;
@@ -108,7 +108,7 @@
   }
   .detailSlider .slick-slide div>figure {
     width: 100%;
-    height: 250px;
+    height: 200px;
   }
   .projectSlider .slick-slide>div>figure>img {
 
@@ -128,7 +128,7 @@
   }
   .detailSlider .slick-slide div>figure {
     width: 100%;
-    height: 250px;
+    height: 200px;
   }
   .projectSlider .slick-slide>div>figure>img {
 
